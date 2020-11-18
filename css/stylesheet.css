@@ -1,0 +1,357 @@
+@charset "UTF-8";
+
+/**/
+/* for* */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 3% 80px 3%;
+}
+
+h1 {
+  color: #64442f;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  border: 1px solid #785139;
+}
+
+h3 {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  text-align: center;
+  border: 1px solid #785139;
+  width: 200px;
+  height: 2.5rem;
+}
+
+li {
+  list-style: none;
+  line-height: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  }
+
+
+/* .menu-bar */
+.menu-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 200px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #785139;
+  padding: 20px 0 10px 0;
+}
+
+.burger {
+  display: none;
+}
+
+.top-menu, .bottom-menu {
+  color: #ffffff;
+}
+
+.top-menu a {
+  color: white;
+}
+
+.bottom-menu p{
+ margin-left:50px;
+}
+
+.bottom-menu li {
+  margin-bottom: 5px;
+}
+
+.bottom-menu i {
+  color: #ffffff;
+  font-size: 3rem;
+}
+
+
+
+/* main */
+main {
+  position: absolute;
+  left: 200px;
+  right: 0;
+}
+
+
+
+/* .big-img */
+.big-img {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/coffee-2306471_1920.jpg);
+  background-size: cover;
+  background-position: left top;
+}
+
+
+
+/* .top */
+.shopname {
+  display: flex;
+}
+
+.shopname img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.top-title h2 {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+}
+
+
+
+/* .big-color1 */
+.big-color1 {
+  width: 100%;
+  background-color:rgba(248, 232, 180, .3);
+}
+
+
+
+/* .titles */
+.titles {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.subtitle {
+  line-height: 1.7rem;
+  border-bottom: 1px solid rgba(121, 81, 57, .8);
+}
+
+
+
+/* .syouhin */
+.syouhin-box img {
+  width: 200px;
+  height: 200px;
+}
+
+.syouhin-box a {
+  display: block;
+}
+
+.item {
+  margin-bottom: 15px;
+}
+
+.item a {
+  color: #484848;
+}
+
+item a:hover {
+  color: #484848;
+}
+
+.onlineshop {
+  display: flex;
+  margin-top: 25px;
+}
+
+.onlineshop p {
+  font-size: 0.7em;
+  padding: 15px 0 0 10px; 
+  margin: 15px 0 0;
+}
+
+
+
+/* .tenpo */
+.tenpo img {
+  width: 400px;
+  height: auto;
+  max-width: 100%;
+  min-width: 320px;
+}
+
+.info-text li {
+  font-size: 0.9rem;
+}
+
+.acsess-info {
+  margin-top: 15px;
+}
+
+.acsess-info li {
+  margin-bottom: 5px;
+}
+
+
+
+/* .otoiawase */
+label {
+  display: block;
+  margin-top: 15px;
+}
+input,
+textarea {
+  background: white;
+  border: 1px #785139 solid;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+input {
+  width: 100%;
+  max-width: 240px;
+}
+
+textarea {
+  width: 100%;
+  max-width: 480px;
+  height: 6rem;
+}
+.otoiawase-box {
+  padding-left: 40px;
+}
+
+.btn {
+  margin-top: 15px;
+}
+
+.back-to-btn {
+	position: fixed;
+	right: 3%;
+	bottom: 3%;
+	z-index: 20;
+	/*一定のところまでスクロールしたら出てくる*/
+	transition: opacity 1s;
+  visibility: hidden;
+  opacity: 0;
+}
+/*JSで付与されるクラス*/
+.fadein {
+	visibility: visible;
+	opacity: 0.8;
+}
+
+@media(max-width: 992px) {
+  /* メニューバー開閉 */  
+  .menu-bar {
+    position: absolute;
+    padding: 100px 0 10px 0;
+    visibility: hidden;
+    width: 0;
+    transition: .1s;
+    background-color: rgba(121, 81, 57, .8);
+  }
+
+  .open-menu {
+    visibility: visible;
+    width: 200px;
+  }
+  
+  main {
+    position: absolute;
+    left: 0px;
+    right: 0;
+    width: 100%;
+    min-width: 320px;
+  }
+
+  .burger {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 5%;
+    font-size: 3rem;
+    color: white;
+    z-index: 20;
+  }
+
+  .burger span{
+    display: block;
+    padding: 0;
+    font-size: 1rem;
+  }
+
+  /* .top */
+  .top-title h2 {
+    top: 30%;
+    left: 10%;
+    
+  }
+
+}
+
+
+
+@media(max-width: 768px) {
+ /* レスポンシブデザイン用 */
+}
+
+
+
+@media(max-width: 576px) {
+  /* for* */
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  /* .top */
+  .shopname img {
+    width: 55px;
+    height: 55px;
+    margin-right: 3px;
+  }
+
+  /* .titles */
+  .titles {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  
+  /* .syouhin */
+  .onlineshop {
+    flex-direction: column;
+    font-size: 0.7em;
+  }
+
+  .onlineshop a{
+    max-width: 220px;
+  }
+
+  .onlineshop p{
+    margin: 5px 0 0;
+    padding: 0;
+  }
+
+  .back-to-btn {
+    width: 50px;
+    height: auto;
+  }
+}
+
