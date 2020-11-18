@@ -201,7 +201,9 @@ item a:hover {
   margin-bottom: 5px;
 }
 
-
+.location-map {
+  max-width: 400px;
+}
 
 /* .otoiawase */
 label {
